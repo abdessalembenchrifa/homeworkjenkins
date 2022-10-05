@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('MVN compile') {
             steps {
-                sh """date"""
+                echo "date"
             }
         }
     }
