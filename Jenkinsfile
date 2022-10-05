@@ -1,9 +1,16 @@
 pipeline {
     agent any 
     stages {
-        stage('MVN compile') {
+        stage('Show date') {
             steps {
-                echo "date"
+                sh """date"""
+            }
+        }
+        stage('Checkout GIT ') {
+            steps {
+                echo 'Pulliing ...';
+                git branch: 'main',
+                url : 'https://github.com/abdessalembenchrifa/homeworkjenkins.git';
             }
         }
     }
